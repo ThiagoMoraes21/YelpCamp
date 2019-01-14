@@ -130,7 +130,7 @@ form {
 }
 
 .jumbotron.landing, .bg-main{
-  background-image: url('img/bg3.jpg');
+  background-image: url('img/yelpcamp.png');
   background-position: 0 30%;
   background-attachment: fixed;
   overflow: hidden;
