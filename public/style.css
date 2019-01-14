@@ -276,6 +276,31 @@ form {
   padding: 5px;
 }
 
+/* FOOTER */
+footer {
+  min-height: 200px;
+  background-color: rgba(25, 33, 74);
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 50px;
+}
+
+footer li {
+  list-style: none;
+}
+
+.footer-social-medias a {
+  font-size: 1.3em;
+  color: #fff;
+}
+
+.link-group {
+  display: flex;
+  justify-content: space-around;
+}
+
 @media only screen and (max-width: 785px){
   .col-md-9 {
     float: right;
