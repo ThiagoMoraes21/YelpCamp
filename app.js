@@ -1,6 +1,7 @@
 var express        = require('express'),
     app            = express(),
     port           = process.env.PORT || 3000,
+    url            = process.evn.DATABASEURL || 'mongodb://localhost/yelp_camp',
     bodyParser     = require('body-parser'),
     mongoose       = require('mongoose'),
     passport       = require('passport'),
@@ -23,7 +24,7 @@ var commentRoutes    = require('./routes/comments'),
 
 //  Setup a enviorment variable to export the data base
 //  command line: export DATABASEURL=mongodb://localhost/yelp_camp
-mongoose.connect(process.env.DATABASEURL, { useNewUrlParser: true });
+mongoose.connect(url, { useNewUrlParser: true });
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname + "/public"));
