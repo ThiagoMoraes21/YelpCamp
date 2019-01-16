@@ -1,7 +1,7 @@
 var express        = require('express'),
     app            = express(),
     port           = process.env.PORT || 3000,
-    url            = process.evn.DATABASEURL || 'mongodb://localhost/yelp_camp',
+    url            = process.env.DATABASEURL || 'mongodb://localhost/yelp_camp',
     bodyParser     = require('body-parser'),
     mongoose       = require('mongoose'),
     passport       = require('passport'),
