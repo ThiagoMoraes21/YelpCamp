@@ -1,7 +1,12 @@
 //  Interactions and Animations
-var navbar = document.querySelector('.navbar');
-var homeTitle = document.querySelector('#parallax');
-var banner = document.querySelector('#banner').offsetTop;
+let navbar = document.querySelector('.navbar');
+let homeTitle = document.querySelector('#parallax');
+let banner = document.querySelector('#banner');
+
+// Checking if the element exists before take it's offsetTop
+if (typeof (banner) != 'undefined' && banner != null) {
+   banner = banner.offsetTop;
+}
 
 window.onscroll = function(){
   //  Change the background of the menu

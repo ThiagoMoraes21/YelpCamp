@@ -19,7 +19,7 @@ var commentRoutes    = require('./routes/comments'),
     indexRoutes      = require('./routes/index');
 
 //  Connecting to a remote data base (mlab.com)
-// mongoose.connect('mongodb://localhost/yelp_camp', { useNewUrlParser: true });
+mongoose.connect('mongodb://localhost/yelp_camp', { useNewUrlParser: true });
 // mongoose.connect('mongodb://thiago:323Sowhat@ds255784.mlab.com:55784/yelpcamp', { useNewUrlParser: true });
 
 //  Setup a enviorment variable to export the data base
