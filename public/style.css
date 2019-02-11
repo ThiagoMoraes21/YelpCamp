@@ -301,13 +301,13 @@ footer li {
   justify-content: space-around;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 700px) {
   .jumbotron h1 {
-    font-size: 4rem;
+    font-size: 4.5rem;
     margin-bottom: 0.5em;
   }
   .jumbotron p {
-  font-size: 1.8rem;
+    font-size: 1.8rem;
   }
   footer {
     flex-direction: column;
@@ -359,7 +359,7 @@ footer li {
   }
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1290px) {
   .jumbotron {
     height: 100vh;
   }
