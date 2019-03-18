@@ -24,7 +24,10 @@ var commentRoutes    = require('./routes/comments'),
 
 //  Setup a enviorment variable to export the data base
 //  command line: export DATABASEURL=mongodb://localhost/yelp_camp
-mongoose.connect(url, { useNewUrlParser: true });
+mongoose.Promise = global.Promise;
+mongoose.connect(url, { useNewUrlParser: true })
+        .then(() => console.log(`Database connected`))
+        .catch(() => console.log(`Database connection error: ${err.message}`));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname + "/public"));
@@ -51,7 +54,7 @@ passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
 // remove existent campgrounds and recreate them
-// seedDB();
+seedDB();
 
 //  requiring routes
 app.use('/campgrounds/:id/comments',commentRoutes);
