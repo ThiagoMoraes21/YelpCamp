@@ -55,7 +55,9 @@
                     href="/campgrounds/<%= campground._id %>/comments/<%= comment._id %>/edit">
                     Edit
                   </a>
-                  <form class="align-element" action="/campgrounds/<%= campground._id %>/comments/<%= comment._id %>?_method=DELETE" method="post">
+                  <form class="align-element" 
+                        action="/campgrounds/<%= campground._id %>/comments/<%= comment._id %>?_method=DELETE" 
+                        method="post">
                     <button class="btn btn-xs btn-danger">Delete</button>
                   </form>
                 <% } %>
@@ -63,7 +65,9 @@
             </div>
             <% }); %>
             <div class="text-center">
-                <a class="btn btn-primary btn-lg" href="/campgrounds/<%= campground._id %>/comments/new">Leave a review</a>
+                <a class="btn btn-primary btn-lg" href="/campgrounds/<%= campground._id %>/comments/new">
+                  Leave a review
+                </a>
             </div>
         </div>
       </div>
